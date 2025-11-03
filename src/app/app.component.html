@@ -1,9 +1,5 @@
-<h3>Current Access Token: {{token}}</h3>
-<h3>Current Refresh Token: {{refresh_token}}</h3>
-<h3>Current Token Id: {{id_token}}</h3>
-<label for="name">Name:</label>
-<input id="name" type="text" [(ngModel)]="name">
-<br>
-<!--<button (click)="login()">Login With Google</button>-->
-<button (click)="loginKeyCloak()">Login</button>
-<button (click)="logoutKeyCloak()">Logout</button>
+@if (!isReady) {
+  <h1>LOADING...</h1>
+} @else {
+  <router-outlet></router-outlet>
+}
